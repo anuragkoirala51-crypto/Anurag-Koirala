@@ -242,7 +242,7 @@ body:has(button:hover) #cursor-ring { width: 48px; height: 48px; border-color: v
   font-weight: 400;
   line-height: .88;
   text-transform: uppercase;
-  letter-spacing: .08em;
+  letter-spacing: -0.02em;
   margin: 0 0 28px;
   width: 100%;
   text-align: center;
@@ -250,12 +250,12 @@ body:has(button:hover) #cursor-ring { width: 48px; height: 48px; border-color: v
 .name-first {
   display: block;
   color: var(--text);
-  letter-spacing: .1em;
+  letter-spacing: -0.02em;
 }
 .name-last {
   display: block;
   color: var(--red);
-  letter-spacing: .06em;
+  letter-spacing: -0.02em;
 }
 .hero-tagline {
   font-size: clamp(16px,2vw,19px);
