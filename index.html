@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Anurag Koirala — Full Stack Developer &amp; AI Enthusiast. Building clean, purposeful web products from Tezpur, India.">
+  <meta name="keywords" content="Anurag Koirala, Full Stack Developer, React, Node.js, AI Integration, Web Development, Portfolio">
+  <meta name="author" content="Anurag Koirala">
+  <meta property="og:title" content="Anurag Koirala — Full Stack Developer &amp; AI Explorer">
+  <meta property="og:description" content="Building clean, purposeful web products — and bringing AI in where it genuinely helps.">
+  <meta property="og:type" content="website">
+  <title>Anurag Koirala — Full Stack Developer &amp; AI Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Permanent+Marker&family=Anton&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">AK</div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+    <span class="loader-text">Loading portfolio…</span>
+  </div>
+</div>
+<!-- NAV -->
+<nav id="site-nav">
+  <div class="nav-wrap">
+    <a href="#home" class="brand">
+      <div class="brand-mark">AK</div>
+      <div class="brand-text">
+        <span class="brand-name">ANURAG KOIRALA</span>
+        <span class="brand-role">Full Stack Developer</span>
+      </div>
+    </a>
+    <ul class="navlinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button id="menu-toggle" class="burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#process" class="mob-link">Process</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="hero_bg.jpg" alt="" aria-hidden="true" class="hero-img">
+    <div class="hero-overlay"></div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  </div>
+  <div class="wrap hero-content">
+    <div class="hero-badge fade-up">
+      <span class="badge-dot"></span>
+      <span id="role-text">Full Stack Developer</span><span class="type-cursor">|</span>
+    </div>
+    <h1 class="hero-name fade-up delay-1">
+      <span class="name-first">Anurag</span>
+      <span class="name-last">Koirala</span>
+    </h1>
+    <p class="hero-tagline fade-up delay-2">
+      I build <span class="highlight">clean, purposeful</span> web products and bring AI in where it genuinely helps.
+      Building ideas for a <span class="highlight">bigger tomorrow.</span>
+    </p>
+    <div class="hero-actions fade-up delay-3">
+      <a href="#projects" class="btn-primary">
+        <span>Explore My Work</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-stats fade-up delay-4">
+      <div class="stat">
+        <span class="stat-num" data-count="5">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">Projects Built</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-count="3">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">Years Learning</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-count="10">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+    </div>
+    <div class="hero-location fade-up delay-5">
+      <span class="loc-dot"></span>
+      Based in Tezpur, Assam, India — Open to remote opportunities
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span class="scroll-line"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Full-Stack Development</span><span class="mx-accent">&#10022;</span>
+    <span>AI Integration</span><span class="mx-accent">&#10022;</span>
+    <span>React &amp; Next.js</span><span class="mx-accent">&#10022;</span>
+    <span>Node.js &amp; Express</span><span class="mx-accent">&#10022;</span>
+    <span>MongoDB</span><span class="mx-accent">&#10022;</span>
+    <span>Python</span><span class="mx-accent">&#10022;</span>
+    <span>Clean Code</span><span class="mx-accent">&#10022;</span>
+    <span>Creative Problem Solving</span><span class="mx-accent">&#10022;</span>
+    <span>Full-Stack Development</span><span class="mx-accent">&#10022;</span>
+    <span>AI Integration</span><span class="mx-accent">&#10022;</span>
+    <span>React &amp; Next.js</span><span class="mx-accent">&#10022;</span>
+    <span>Node.js &amp; Express</span><span class="mx-accent">&#10022;</span>
+    <span>MongoDB</span><span class="mx-accent">&#10022;</span>
+    <span>Python</span><span class="mx-accent">&#10022;</span>
+    <span>Clean Code</span><span class="mx-accent">&#10022;</span>
+    <span>Creative Problem Solving</span><span class="mx-accent">&#10022;</span>
+  </div>
+</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-header fade-up">
+      <span class="eyebrow">02 &mdash; About</span>
+      <h2>More About Me.</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-left fade-up">
+        <p class="about-text">I'm <strong>Anurag Koirala</strong>, a full stack developer and AI enthusiast who enjoys turning ideas into real products. I like building clean, user-friendly web experiences and exploring new technologies that make a positive impact.</p>
+        <p class="about-text">Currently based in Tezpur, Assam, I'm always open to learning, collaborating, and working on projects that solve real problems. I believe in the power of combining solid engineering with thoughtful design.</p>
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="detail-icon">&#128205;</span>
+            <div>
+              <span class="detail-label">Location</span>
+              <span class="detail-val">Tezpur, Assam, India</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">&#127891;</span>
+            <div>
+              <span class="detail-label">Education</span>
+              <span class="detail-val">Computer Science &amp; Engineering</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">&#128188;</span>
+            <div>
+              <span class="detail-label">Availability</span>
+              <span class="detail-val available">Open to Opportunities</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">&#127758;</span>
+            <div>
+              <span class="detail-label">Preferred</span>
+              <span class="detail-val">Remote / Hybrid</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-actions">
+          <a href="#contact" class="btn-primary">Let's Connect &rarr;</a>
+          <a href="#" class="btn-ghost" id="download-cv">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+      <div class="about-right fade-up delay-2">
+        <div class="about-photo-wrap">
+          <img src="city_skyline.jpg" alt="Night cityscape representing big ideas" class="about-photo">
+          <div class="about-photo-badge">
+            <span class="badge-quote">"Same ideas. Bigger possibilities."</span>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="ac-icon">&#128296;</div>
+            <h4>Build</h4>
+            <p>Web applications end to end — from pixel-perfect UI to scalable backend systems.</p>
+          </div>
+          <div class="about-card">
+            <div class="ac-icon">&#129504;</div>
+            <h4>Learn</h4>
+            <p>Constantly exploring new technologies, patterns, and ideas.</p>
+          </div>
+          <div class="about-card">
+            <div class="ac-icon">&#129309;</div>
+            <h4>Collaborate</h4>
+            <p>Working with people who share passion for building meaningful products.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-header fade-up">
+      <span class="eyebrow">03 &mdash; Selected Work</span>
+      <h2>Things I've Built.</h2>
+      <div class="rule"></div>
+      <p class="section-lede">A curated showcase of projects that demonstrate my approach to solving real problems with clean, functional code.</p>
+    </div>
+    <div class="proj-filters fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+    </div>
+    <div class="proj-grid">
+      <article class="proj-card featured fade-up" data-category="fullstack" data-id="saatyatra">
+        <div class="proj-card-inner">
+          <div class="proj-img-wrap">
+            <img src="saatyatra_preview.jpg" alt="SaatYatra travel platform preview" class="proj-img">
+            <div class="proj-img-overlay">
+              <button class="proj-detail-btn" data-id="saatyatra">View Details</button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-tag featured-tag">&#9733; Major Project</span>
+              <span class="proj-year">2024</span>
+            </div>
+            <h3 class="proj-name">SaatYatra</h3>
+            <p class="proj-desc">A full-featured travel discovery, social content, and booking platform. Users can explore destinations, share trip content, and book travel experiences all in one seamless application.</p>
+            <div class="proj-stack">
+              <span class="chip">React</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">REST API</span>
+              <span class="chip">Express.js</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                Live Demo
+              </a>
+              <a href="#" class="proj-link-btn outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card fade-up delay-1" data-category="ai" data-id="ai-chat">
+        <div class="proj-card-inner">
+          <div class="proj-img-wrap proj-no-img">
+            <div class="proj-placeholder">
+              <div class="placeholder-icon">&#129302;</div>
+              <div class="proj-glow"></div>
+            </div>
+            <div class="proj-img-overlay">
+              <button class="proj-detail-btn" data-id="ai-chat">View Details</button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-tag">AI Integration</span>
+              <span class="proj-year">2024</span>
+            </div>
+            <h3 class="proj-name">AI Chat Interface</h3>
+            <p class="proj-desc">A sleek AI-powered chat application integrating OpenAI's API with real-time streaming, conversation history, and a polished user interface.</p>
+            <div class="proj-stack">
+              <span class="chip">Next.js</span>
+              <span class="chip">OpenAI API</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn">Live Demo</a>
+              <a href="#" class="proj-link-btn outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card fade-up delay-2" data-category="fullstack" data-id="ecommerce">
+        <div class="proj-card-inner">
+          <div class="proj-img-wrap proj-no-img">
+            <div class="proj-placeholder">
+              <div class="placeholder-icon">&#128717;</div>
+              <div class="proj-glow" style="--glow-color:#7c3aed"></div>
+            </div>
+            <div class="proj-img-overlay">
+              <button class="proj-detail-btn" data-id="ecommerce">View Details</button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-tag">Full Stack</span>
+              <span class="proj-year">2023</span>
+            </div>
+            <h3 class="proj-name">E-Commerce Platform</h3>
+            <p class="proj-desc">A full-featured online store with cart management, secure authentication, payment flow simulation, and an admin dashboard for product management.</p>
+            <div class="proj-stack">
+              <span class="chip">React</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">JWT</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn">Live Demo</a>
+              <a href="#" class="proj-link-btn outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proj-card fade-up delay-3" data-category="frontend" data-id="dashboard">
+        <div class="proj-card-inner">
+          <div class="proj-img-wrap proj-no-img">
+            <div class="proj-placeholder">
+              <div class="placeholder-icon">&#128202;</div>
+              <div class="proj-glow" style="--glow-color:#0ea5e9"></div>
+            </div>
+            <div class="proj-img-overlay">
+              <button class="proj-detail-btn" data-id="dashboard">View Details</button>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-tag">Frontend</span>
+              <span class="proj-year">2023</span>
+            </div>
+            <h3 class="proj-name">Analytics Dashboard</h3>
+            <p class="proj-desc">An interactive analytics dashboard with dynamic charts, real-time data visualization, filters, and a fully responsive layout for any device.</p>
+            <div class="proj-stack">
+              <span class="chip">React</span>
+              <span class="chip">Chart.js</span>
+              <span class="chip">CSS Grid</span>
+              <span class="chip">REST API</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-link-btn">Live Demo</a>
+              <a href="#" class="proj-link-btn outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- Modal -->
+    <div id="proj-modal" class="proj-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop" id="modal-backdrop"></div>
+      <div class="modal-box">
+        <button id="modal-close" class="modal-close" aria-label="Close">&times;</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-header fade-up">
+      <span class="eyebrow">04 &mdash; Stack</span>
+      <h2>My Toolkit.</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="skills-layout">
+      <div class="skill-categories fade-up">
+        <button class="sk-cat active" data-cat="all">All</button>
+        <button class="sk-cat" data-cat="frontend">Frontend</button>
+        <button class="sk-cat" data-cat="backend">Backend</button>
+        <button class="sk-cat" data-cat="database">Database</button>
+        <button class="sk-cat" data-cat="ai">AI &amp; Tools</button>
+      </div>
+      <div class="skills-grid fade-up delay-1">
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#f7df1e;--sk-bg:rgba(247,223,30,.15)">JS</div><span class="si-name">JavaScript</span></div>
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#3178c6;--sk-bg:rgba(49,120,198,.15)">TS</div><span class="si-name">TypeScript</span></div>
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#61dafb;--sk-bg:rgba(97,218,251,.15)">Re</div><span class="si-name">React</span></div>
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#fff;--sk-bg:rgba(255,255,255,.1)">N.</div><span class="si-name">Next.js</span></div>
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#38bdf8;--sk-bg:rgba(56,189,248,.15)">Tw</div><span class="si-name">Tailwind</span></div>
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#e34f26;--sk-bg:rgba(227,79,38,.15)">Ht</div><span class="si-name">HTML5</span></div>
+        <div class="skill-item" data-cat="frontend"><div class="si-icon" style="--sk-color:#264de4;--sk-bg:rgba(38,77,228,.15)">Cs</div><span class="si-name">CSS3</span></div>
+        <div class="skill-item" data-cat="backend"><div class="si-icon" style="--sk-color:#8cc84b;--sk-bg:rgba(140,200,75,.15)">No</div><span class="si-name">Node.js</span></div>
+        <div class="skill-item" data-cat="backend"><div class="si-icon" style="--sk-color:#fff;--sk-bg:rgba(255,255,255,.1)">Ex</div><span class="si-name">Express.js</span></div>
+        <div class="skill-item" data-cat="backend"><div class="si-icon" style="--sk-color:#f7d046;--sk-bg:rgba(247,208,70,.15)">Py</div><span class="si-name">Python</span></div>
+        <div class="skill-item" data-cat="database"><div class="si-icon" style="--sk-color:#4db33d;--sk-bg:rgba(77,179,61,.15)">Mo</div><span class="si-name">MongoDB</span></div>
+        <div class="skill-item" data-cat="database"><div class="si-icon" style="--sk-color:#336791;--sk-bg:rgba(51,103,145,.15)">Pg</div><span class="si-name">PostgreSQL</span></div>
+        <div class="skill-item" data-cat="database"><div class="si-icon" style="--sk-color:#ffca28;--sk-bg:rgba(255,202,40,.15)">Fb</div><span class="si-name">Firebase</span></div>
+        <div class="skill-item" data-cat="ai"><div class="si-icon" style="--sk-color:#10a37f;--sk-bg:rgba(16,163,127,.15)">Ai</div><span class="si-name">OpenAI API</span></div>
+        <div class="skill-item" data-cat="ai"><div class="si-icon" style="--sk-color:#f05032;--sk-bg:rgba(240,80,50,.15)">Gi</div><span class="si-name">Git / GitHub</span></div>
+        <div class="skill-item" data-cat="ai"><div class="si-icon" style="--sk-color:#a259ff;--sk-bg:rgba(162,89,255,.15)">Fi</div><span class="si-name">Figma</span></div>
+        <div class="skill-item" data-cat="ai"><div class="si-icon" style="--sk-color:#2496ed;--sk-bg:rgba(36,150,237,.15)">Dk</div><span class="si-name">Docker</span></div>
+      </div>
+    </div>
+    <div class="proficiency fade-up delay-2">
+      <h3 class="prof-title">Core Proficiency</h3>
+      <div class="prof-bars">
+        <div class="prof-bar-item"><div class="prof-bar-label"><span>React / Next.js</span><span class="prof-pct">88%</span></div><div class="prof-bar-track"><div class="prof-bar-fill" data-width="88"></div></div></div>
+        <div class="prof-bar-item"><div class="prof-bar-label"><span>Node.js / Express</span><span class="prof-pct">82%</span></div><div class="prof-bar-track"><div class="prof-bar-fill" data-width="82"></div></div></div>
+        <div class="prof-bar-item"><div class="prof-bar-label"><span>MongoDB / PostgreSQL</span><span class="prof-pct">78%</span></div><div class="prof-bar-track"><div class="prof-bar-fill" data-width="78"></div></div></div>
+        <div class="prof-bar-item"><div class="prof-bar-label"><span>Python / AI Integration</span><span class="prof-pct">72%</span></div><div class="prof-bar-track"><div class="prof-bar-fill" data-width="72"></div></div></div>
+        <div class="prof-bar-item"><div class="prof-bar-label"><span>TypeScript</span><span class="prof-pct">75%</span></div><div class="prof-bar-track"><div class="prof-bar-fill" data-width="75"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-header fade-up">
+      <span class="eyebrow">05 &mdash; What I Do</span>
+      <h2>What I Bring to the Table.</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="bring-grid">
+      <div class="bring-card fade-up">
+        <div class="bring-num">01</div>
+        <div class="bring-icon">&#9889;</div>
+        <h3>Full-Stack Development</h3>
+        <p>Building responsive web applications end-to-end from beautifully designed frontends to scalable backend services, REST APIs, and database-connected products.</p>
+        <ul class="bring-list">
+          <li>Responsive UI/UX with React &amp; Next.js</li>
+          <li>RESTful APIs with Node.js &amp; Express</li>
+          <li>Database design &amp; optimization</li>
+        </ul>
+      </div>
+      <div class="bring-card fade-up delay-1">
+        <div class="bring-num">02</div>
+        <div class="bring-icon">&#129302;</div>
+        <h3>AI Integration</h3>
+        <p>Adding useful AI capabilities to applications including AI-powered features, automation pipelines, and integrations with language models that genuinely enhance products.</p>
+        <ul class="bring-list">
+          <li>OpenAI API integration</li>
+          <li>Intelligent feature development</li>
+          <li>Automation &amp; workflow optimization</li>
+        </ul>
+      </div>
+      <div class="bring-card fade-up delay-2">
+        <div class="bring-num">03</div>
+        <div class="bring-icon">&#127919;</div>
+        <h3>Creative Problem Solving</h3>
+        <p>Turning ideas into practical digital products with real attention to usability, performance, and clean design that doesn't just work but feels great to use.</p>
+        <ul class="bring-list">
+          <li>Product-first thinking</li>
+          <li>Performance optimization</li>
+          <li>Clean, maintainable code</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-header fade-up">
+      <span class="eyebrow">06 &mdash; Process</span>
+      <h2>From Idea to Product.</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="process-track">
+      <div class="process-line"></div>
+      <div class="process-steps">
+        <div class="process-step fade-up">
+          <div class="ps-num">01</div>
+          <div class="ps-body"><h3>Understand</h3><p>Deep dive into the client's idea, goals, and requirements. Ask the right questions to define scope and set clear expectations before writing a single line of code.</p></div>
+        </div>
+        <div class="process-step fade-up delay-1">
+          <div class="ps-num">02</div>
+          <div class="ps-body"><h3>Design &amp; Plan</h3><p>Wireframe the UX, plan the architecture, and choose the right technologies. Good planning here saves hours of rework later.</p></div>
+        </div>
+        <div class="process-step fade-up delay-2">
+          <div class="ps-num">03</div>
+          <div class="ps-body"><h3>Build</h3><p>Develop a practical, responsive, and functional solution with clean documented code. Regular check-ins to ensure the product aligns with expectations.</p></div>
+        </div>
+        <div class="process-step fade-up delay-3">
+          <div class="ps-num">04</div>
+          <div class="ps-body"><h3>Test &amp; Improve</h3><p>Thorough testing across devices, browsers, and edge cases. Refine based on feedback until the product is polished and ready for the world.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="philosophy-section">
+  <div class="wrap">
+    <div class="phil-content fade-up">
+      <div class="phil-quote-mark">"</div>
+      <blockquote class="phil-quote">I don't just write code &mdash; I build products. Every decision, from architecture to pixel, is intentional. I care about what I ship.</blockquote>
+      <cite class="phil-cite">&mdash; Anurag Koirala</cite>
+    </div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-header fade-up">
+      <span class="eyebrow">07 &mdash; Get in Touch</span>
+      <h2>Have an idea?<br>Let's build it.</h2>
+      <div class="rule"></div>
+      <p class="section-lede">Open to freelance projects, collaborations, and conversations with recruiters. I usually reply within a day or two.</p>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info fade-up">
+        <h3 class="contact-sub">Reach me directly</h3>
+        <div class="contact-links">
+          <a href="mailto:anuragkoirala@example.com" class="contact-card" id="contact-email">
+            <div class="cc-icon email-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div class="cc-text"><span class="cc-label">Email</span><span class="cc-val">anuragkoirala@example.com</span></div>
+            <div class="cc-arrow">&rarr;</div>
+          </a>
+          <a href="https://linkedin.com/in/anuragkoirala" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin">
+            <div class="cc-icon linkedin-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+            <div class="cc-text"><span class="cc-label">LinkedIn</span><span class="cc-val">linkedin.com/in/anuragkoirala</span></div>
+            <div class="cc-arrow">&rarr;</div>
+          </a>
+          <a href="https://github.com/anuragkoirala" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+            <div class="cc-icon github-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></div>
+            <div class="cc-text"><span class="cc-label">GitHub</span><span class="cc-val">github.com/anuragkoirala</span></div>
+            <div class="cc-arrow">&rarr;</div>
+          </a>
+        </div>
+        <div class="contact-status">
+          <span class="status-dot"></span>
+          <span>Currently available for new projects</span>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-up delay-2">
+        <h3 class="contact-sub">Send a message</h3>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name">Your Name *</label>
+              <input type="text" id="f-name" name="name" placeholder="John Doe" required autocomplete="name">
+              <span class="field-err" id="name-err"></span>
+            </div>
+            <div class="form-field">
+              <label for="f-email">Email Address *</label>
+              <input type="email" id="f-email" name="email" placeholder="john@example.com" required autocomplete="email">
+              <span class="field-err" id="email-err"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="f-subject">Subject *</label>
+            <input type="text" id="f-subject" name="subject" placeholder="What's this about?" required>
+          </div>
+          <div class="form-field">
+            <label for="f-type">Project Type</label>
+            <select id="f-type" name="type">
+              <option value="" disabled selected>Select project type</option>
+              <option value="webapp">Web App</option>
+              <option value="website">Website</option>
+              <option value="ai">AI Integration</option>
+              <option value="fullstack">Full Stack Project</option>
+              <option value="collab">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="f-msg">Message *</label>
+            <textarea id="f-msg" name="message" placeholder="Tell me about your project, idea, or anything else…" required rows="5"></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit-btn">
+            <span class="submit-text">Send Message</span>
+            <svg class="submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <div id="form-status" class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-mark large">AK</div>
+        <div>
+          <div class="foot-name">Anurag Koirala</div>
+          <div class="foot-role">Full-Stack Developer &amp; AI Explorer</div>
+          <p class="foot-tagline">Building ideas for a bigger tomorrow.</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Socials</h4>
+          <ul>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="mailto:anuragkoirala@example.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="footer-year"></span> Anurag Koirala. All rights reserved.</span>
+      <span class="footer-sig">Same ideas. Bigger possibilities.</span>
+      <a href="#home" class="back-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
